@@ -1,0 +1,23 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "L648CM8C87.app.majlisplay",
+          "L648CM8C87.app.majlisplay.preview",
+          "L648CM8C87.app.majlisplay.dev"
+        ],
+        "components": [
+          {
+            "/": "/mitspielen",
+            "comment": "Remote-Modus: mit Code einchecken"
+          },
+          {
+            "/": "/mitspielen/*",
+            "comment": "Remote-Modus: mit Code einchecken"
+          }
+        ]
+      }
+    ]
+  }
+}
