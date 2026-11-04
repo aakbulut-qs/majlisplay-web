@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitspielen – Majlis Play</title>
+<meta name="description" content="Mit der App Majlis Play bei einem Spiel am großen Bildschirm mitspielen.">
+<style>:root{color-scheme:dark;--bg:#0A1430;--card:#13224A;--text:#F4EFE6;--muted:#A9B6C9;--accent:#F2C25B;--line:#26365E}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header,main,footer{max-width:760px;margin:0 auto;padding:0 16px}
+header{padding-top:24px;padding-bottom:8px}
+.brand{color:var(--text);text-decoration:none;font-weight:800;font-size:20px;letter-spacing:.2px}
+.brand span{color:var(--accent)}
+main{padding-bottom:32px}
+h1{font-size:30px;line-height:1.25;margin:24px 0 8px}
+h2{font-size:20px;line-height:1.3;margin:28px 0 6px}
+p,li{color:var(--text)}
+.lead{color:var(--muted);font-size:18px}
+.note{background:#3A2E12;border:1px solid var(--accent);border-radius:10px;padding:10px 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0}
+ul{padding-left:22px}
+footer{border-top:1px solid var(--line);padding-top:16px;padding-bottom:32px;color:var(--muted);font-size:15px}
+footer nav a{margin-right:14px;display:inline-block;margin-bottom:6px}
+.button{display:inline-block;background:var(--accent);color:#0A1430;font-weight:800;text-decoration:none;padding:12px 22px;border-radius:12px}
+.code{font-size:40px;font-weight:800;letter-spacing:4px;color:var(--accent);margin:0}
+.small{color:var(--muted);font-size:15px}</style>
+</head>
+<body>
+<header><a class="brand" href="/">Majlis <span>Play</span></a></header>
+<main>
+<h1>Mitspielen</h1>
+<p class="lead">Du bist zu einem Spiel am großen Bildschirm eingeladen. Eingecheckt wird mit der App Majlis Play.</p>
+<div class="card"><p class="small">Code</p><p class="code" id="code">––– –––</p>
+<p><a class="button" id="open" href="majlisplay://mitspielen">In der App öffnen</a></p>
+<p class="small">Testversion (TestFlight): <a id="open-preview" href="majlisplay-preview://mitspielen">in der Vorschau-App öffnen</a></p></div>
+<h2>So geht’s</h2>
+<ol><li>Majlis Play öffnen und auf „Mitspielen“ tippen.</li><li>Den Code eingeben oder den QR-Code am Bildschirm scannen.</li><li>Name und Avatar wählen – fertig.</li></ol>
+<p>Noch keine App? Majlis Play kommt bald in den App Store und zu Google Play.</p>
+<script>(function(){var m=/[?&]code=([^&#]+)/i.exec(location.search);if(!m)return;var c=decodeURIComponent(m[1]).toUpperCase().replace(/[^23456789ABCDEFGHJKMNPQRSTUVWXYZ]/g,'');if(c.length!==6)return;document.getElementById('code').textContent=c.slice(0,3)+' '+c.slice(3);['open','open-preview'].forEach(function(id){var a=document.getElementById(id);a.href=a.href+'?code='+c;});})();</script>
+</main>
+<footer><nav><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="/nutzungsbedingungen/">Nutzungsbedingungen</a><a href="/support/">Support</a><a href="/konto-loeschen/">Konto löschen</a></nav><p>© 2026 Majlis Play</p></footer>
+</body>
+</html>
